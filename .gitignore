@@ -1,3 +1,4 @@
 
 /.vscode
 /src/backend/__pycache__
+/src/frontend/__pycache__

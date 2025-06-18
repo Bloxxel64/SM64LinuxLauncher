@@ -6,6 +6,7 @@ import os
 import install_deps
 import compiler
 
+
 def main():
     cmd = input("Please enter a command (e.g. 'help', 'install-depends', etc.): ")
 
