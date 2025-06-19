@@ -11,7 +11,7 @@ from subprocess import call
 from frontend import compilemenu as cm
 
 #make the directory for the launcher
-basedir = Path("~/.local/share/sm64linuxlauncher")
+basedir = Path(Path.home()._str + "/.local/share/sm64linuxlauncher")
 if not basedir.is_dir():
     call("mkdir" " ~/.local/share/sm64linuxlauncher", shell=True)
 
