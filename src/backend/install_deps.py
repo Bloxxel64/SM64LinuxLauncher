@@ -1,4 +1,4 @@
-import subprocess
+from subprocess import call
 
 aptCmd = ('/usr/bin/apt install -y libsdl2-dev gcc-mips-linux-gnu make build-essential python3-gi-cairo python3-tk')
 

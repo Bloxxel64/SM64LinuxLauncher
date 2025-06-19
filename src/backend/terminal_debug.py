@@ -1,10 +1,11 @@
-print("Hello! This is the terminal debug executible!\n"
-      "This can be used for testing various aspects of the launcher, and should only be used for such.")
+print("\nHello! This is the terminal debug executible!\n"
+      "This can be used for testing various aspects of the launcher, and should only be used for such.\n")
 
 import os
 
 import install_deps
 import compiler
+import confighandler
 
 
 def main():
@@ -14,7 +15,8 @@ def main():
         print("List of available commands:\n"
             "help (duh),\n"
             "install-depends,\n"
-            "clone-repo\n")
+            "clone-repo\n"
+            "checkrom\n")
         main()
 
     if cmd == "install-depends":
@@ -26,6 +28,12 @@ def main():
 
     if cmd == "clone-repo":
         output = compiler.func_clone_repo("https://github.com/coop-deluxe/sm64coopdx", os.path.expanduser('~') + "/gexcoop")
+        print(main)
+        main()
+
+    if cmd == "checkrom":
+        output = confighandler.checkforrom()
+        print(output)
         main()
 
 main()
