@@ -1,0 +1,5 @@
+
+/.vscode
+/src/backend/__pycache__
+/src/frontend/__pycache__
+/src/__pycache__/
