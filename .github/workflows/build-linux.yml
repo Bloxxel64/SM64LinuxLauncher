@@ -30,7 +30,7 @@ jobs:
         run: pip3 install pyinstaller && pyinstaller src/main.py -F -n SM64LinuxLauncher
 
       - name: Dump Artifacts
-        uses: actions/upload-artifacts@v4
+        uses: actions/upload-artifact@v4.6.2
         with:
           name: SM64LinuxLauncher
           path: ~/SM64LinuxLauncher/SM64LinuxLaunncher/build/
