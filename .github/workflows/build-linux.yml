@@ -27,4 +27,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: pyinstall main.py
+        run:
+          pip install pyinstaller
+          pyinstall main.py
