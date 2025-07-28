@@ -29,4 +29,4 @@ jobs:
       - name: Run a one-line script
         run:
           pip3 install pyinstaller
-          pyinstall main.py --onefile --name SM64LinuxLauncher
+          pyinstall main.py -F -n SM64LinuxLauncher
