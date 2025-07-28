@@ -29,6 +29,9 @@ jobs:
       - name: Build Executible
         run: pip3 install pyinstaller && pyinstaller src/main.py -F -n SM64LinuxLauncher
 
+      - name: Show Dir Files (for testign)
+        run: cd ~/SM64LinuxLauncher/SM64LinuxLaunncher/build/ && dir
+
       - name: Dump Artifacts
         uses: actions/upload-artifact@v4.6.2
         with:
