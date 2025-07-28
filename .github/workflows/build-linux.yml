@@ -27,4 +27,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Build Executible
-        run: pip3 install pyinstaller && pyinstaller main.py -F -n SM64LinuxLauncher
+        run: pip3 install pyinstaller && pyinstaller src/main.py -F -n SM64LinuxLauncher
