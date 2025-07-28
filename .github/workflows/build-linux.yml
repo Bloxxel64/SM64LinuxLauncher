@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Build Executible
-        run: pip3 install pyinstaller && pyinstaller src/main.py -F -n SM64LinuxLauncher-${{github.ref}}
+        run: pip3 install pyinstaller && pyinstaller src/main.py -F -n SM64LinuxLauncher-${{github.ref_name}}
 
       - name: Dump Artifacts
         uses: actions/upload-artifact@v4.6.2
