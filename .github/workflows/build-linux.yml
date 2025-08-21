@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Build Executible
-        run: pip3 install pyinstaller && pyinstaller src/main.py -F -n SM64LinuxLauncher-build
+        run: pip3 install pyinstaller && pyinstaller src/main.py -n SM64LinuxLauncher-build
 
       - name: List Files
         run: cd /home/runner/work/SM64LinuxLauncher/SM64LinuxLauncher/dist/ && ls
@@ -36,4 +36,4 @@ jobs:
         uses: actions/upload-artifact@v4.6.2
         with:
           name: SM64LinuxLauncher
-          path: /home/runner/work/SM64LinuxLauncher/SM64LinuxLauncher/dist/SM64LinuxLauncher-build
+          path: /home/runner/work/SM64LinuxLauncher/SM64LinuxLauncher/dist/
