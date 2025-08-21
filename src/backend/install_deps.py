@@ -1,6 +1,6 @@
 from subprocess import call
 
-aptCmd = ('/usr/bin/apt install -y libsdl2-dev gcc-mips-linux-gnu make build-essential python3-gi-cairo python3-tk')
+aptCmd = ('/usr/bin/apt install -y libsdl2-dev gcc-mips-linux-gnu make build-essential python3-tk')
 
 pacmanCmd = ('pacman -S sdl2_gfx sdl2_image sdl2_mixer sdl2_net git base-devel tk')
 
