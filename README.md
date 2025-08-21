@@ -10,5 +10,7 @@ Linux has been lacking when it comes to utilities for this, while Windows has to
 
 ### Installation
 
-You don't.
+Grab the latest binary from https://github.com/Bloxxel64/SM64LinuxLauncher/releases and run it!
+
+config, cache, and etc can be found at `/home/yourusername/.local/.share/sm64linuxlauncher
 
