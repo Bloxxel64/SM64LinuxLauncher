@@ -26,6 +26,9 @@ jobs:
       - uses: actions/checkout@v4
 
       # Runs a single command using the runners shell
+      - name: Install Depends
+        run: /usr/bin/apt install -y libsdl2-dev gcc-mips-linux-gnu make build-essential python3-gi-cairo python3-tk
+
       - name: Build Executible
         run: pip3 install pyinstaller && pyinstaller src/main.py -n SM64LinuxLauncher-build
 
