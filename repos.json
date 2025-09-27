@@ -1,3 +1,38 @@
 {
+    "repos": [
+        {
+            "name":"SM64 EX",
+            "reponame":"sm64ex-nightly",
+            "link":"https://github.com/sm64pc/sm64ex",
+            "branch":"nightly",
+            "hasbinaries":false,
+            "binarylinklinux":null,
+            "binarylinksteamdeck":null,
+            "supportspatches":true,
+            "description":"The base version of the PC Port that other mods are built off of. All mods are installed through patches that can be selected on the next screen."
+        },
+        {
+            "name":"Render96 EX",
+            "reponame": "render96ex",
+            "link":"https://github.com/Render96/Render96ex/",
+            "branch":"tester",
+            "hasbinaries":false,
+            "binarylinklinux":null,
+            "binarylinksteamdeck":null,
+            "supportspatches":false,
+            "description":"A mod of sm64ex that adds some bonus content and collectibles. Intended to be used with the Render96 Models, Textures and Optional Levels."
+        },
+        {
+            "name":"SM64 Coop Deluxe",
+            "reponame":"sm64coop-dx",
+            "link":"https://github.com/coop-deluxe/sm64coopdx",
+            "branch":"main",
+            "hasbinaries":true,
+            "binarylinklinux":"https://github.com/coop-deluxe/sm64coopdx/releases/latest/download/sm64coopdx_Linux.zip",
+            "binarylinksteamdeck":"https://github.com/coop-deluxe/sm64coopdx/releases/latest/download/sm64coopdx_SteamOS.zip",
+            "supportspatches":false,
+            "description":"One of the most ambitious PC Port mods to date, allows you to play online nigh seamlessly with others, and has full support for GMOD style lua mods, custom levels and models, and more. A continuation of sm64ex-coop."
+        }
 
+    ]
 }
