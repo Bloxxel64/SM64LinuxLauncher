@@ -1,0 +1,42 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "stable" branch
+  push:
+    branches: [ "stable", "nightly" ]
+  pull_request:
+    branches: [ "stable", "nightly" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  Build-Executible:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      # Runs a single command using the runners shell
+      - name: Install Depends
+        run: sudo apt install -y python3 python3-tk
+
+      - name: Build Executible
+        run: pip3 install pyinstaller && pyinstaller src/main.py -F -n SM64LinuxLauncher
+
+      - name: List Files
+        run: cd /home/runner/work/SM64LinuxLauncher/SM64LinuxLauncher/dist/ && ls
+
+      - name: Dump Artifacts
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: SM64LinuxLauncher
+          path: /home/runner/work/SM64LinuxLauncher/SM64LinuxLauncher/dist/SM64LinuxLauncher
