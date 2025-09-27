@@ -4,8 +4,16 @@ from backend.confighandler import checkforrom
 
 import tkinter as tk
 
+def finishbuild(destroywindow, instancename):
+    if destroywindow: destroywindow.destroy()
+    cwindow = tk.Tk()
+    tk.Label(cwindow, text="Build Finished! Proper shortcuts and stuff are coming soon, but for now you can find the finished game at /home/[username]/.local/share/sm64linuxlauncher/instances/" + instancename, wraplength=350).grid()
+
 def cloneandcompilebinaries(name, link, branch, destroywindow, instancename):
     if destroywindow: destroywindow.destroy()
+
+    cwindow = tk.Tk()
+    tk.Label(cwindow, text="Building game, please wait...", wraplength=350).grid()
 
     if instancename == "":
         foldername = name
@@ -35,9 +43,14 @@ def cloneandcompilebinaries(name, link, branch, destroywindow, instancename):
 
     call("cd " + Path.home()._str + "/.local/share/sm64linuxlauncher" + " && " + "rm cache -rf",shell=True)
 
+    finishbuild(cwindow, instancename)
+
 
 def downloadandinstallbinaries(name, desktoplink, steamoslink, issteamdeck, destroywindow, instancename):
     if destroywindow: destroywindow.destroy()
+
+    cwindow = tk.Tk()
+    tk.Label(cwindow, text="Building game, please wait...", wraplength=350).grid()
 
     print(instancename)
 
@@ -61,3 +74,5 @@ def downloadandinstallbinaries(name, desktoplink, steamoslink, issteamdeck, dest
     call("cd " + Path.home()._str + "/.local/share/sm64linuxlauncher/cache/" + name + " && " + "mkdir -p " + "~/.local/share/sm64linuxlauncher/instances/" + foldername + " && " + "unzip binary.zip -d " + Path.home()._str + "/.local/share/sm64linuxlauncher/instances/" + foldername, shell=True)
 
     call("cd " + Path.home()._str + "/.local/share/sm64linuxlauncher" + " && " + "rm cache -rf",shell=True)
+
+    finishbuild(cwindow, instancename)
